@@ -7,6 +7,9 @@ import {
   ForbesList,
   CryptoHistory,
 } from 'components';
+import data from 'data/article.json';
+
+import statistic from 'data/data.json';
 
 export const App = () => {
   return (
@@ -15,12 +18,20 @@ export const App = () => {
         <Heading marginBottom="50px" textAlign="center">
           Task 1
         </Heading>
-        <BlogCard />
+        <BlogCard
+          poster={data.poster}
+          tag={data.tag}
+          title={data.title}
+          description={data.description}
+          name={data.name}
+          avatar={data.avatar}
+          postedAt={data.postedAt}
+        />
 
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 2
         </Heading>
-        <Statistics />
+        <Statistics title="Main Statistics" items={statistic} />
 
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 3
